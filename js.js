@@ -2,7 +2,11 @@ const inputEl = document.querySelector("input");
 const bodyEl = document.querySelector("body");
 const circleEl = document.querySelector(".circle");
 const labelEl = document.querySelector(".label");
+inputEl.checked = false;
+
 inputEl.checked = JSON.parse(localStorage.getItem("mode"));
+
+updateBody();
 
 function updateBody() {
   if (inputEl.checked) {
